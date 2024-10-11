@@ -11,6 +11,7 @@
 
 
         <link type="text/css"  rel="stylesheet" href="assets/css/style.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/modal_style.css">
 
         <title>Firas Muhammed Dahaa - فراس محمد ضاحه - مطور ويب</title>
         <meta name="description"
@@ -100,6 +101,7 @@
               </div>
  <div class="h-full w-full  overflow-hidden   ">
 
+    
         
           <section id="main" class="px-x md:px-md pt-10 md:scroll-mt-20  xl:justify-center">
             <div
@@ -115,7 +117,7 @@
               <div
                 class=" justify-center items-start flex flex-col  text-white/70 gap-5 md:w-[60%]  w-full "
                 style="opacity: 1; transform: none;"><h1
-                  style="title dark:text-dark; ">Hello There !</h1><div
+                  style="title dark:text-dark;">Hello There !</h1><div
                   class=" md:text-[32px] text-[20px]   ">I’m Firas Muhammed Dahaa<p 
                     class="text-gradient md:text-[40px] dark:text-dark  text-[28px] md:whitespace-nowrap font-bold  "
                     style="opacity: 1; "><span
@@ -181,11 +183,11 @@
                     class="flex flex-row md:gap-5 gap-2 items-center"> 
                     
                     <div
-                      class="btn rounded-xl text-center  ">
-                      <a target="_blank"
+                      class="btn btn-modal btn-open rounded-xl text-center  ">
+                      <button target="_blank"
                         class=" text-gradient text-sm md:text-lg  download-btn"
-                        href="https://drive.google.com/file/d/1hyeHNNqTHNDnLiyrwU3TXmi5kAMLd3WE/view?usp=sharing"  >Download
-                        CV</a>
+                        href="#"  >Download
+                        CV</button>
                         <svg class="ico" aria-hidden="true"  fill="​#4d90fe" width="30px" height="20px" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
                           <path stroke="#4d90fe"  stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                             d="M12 19V5m0 14-4-4m4 4 4-4"></path>
@@ -248,13 +250,43 @@
                   </div>
           </section>
 
+            <section  class="modal dark:bg-black hidden backdrop-blur-[.2rem] font-family: 'Google Sans', Arial, sans-serif;">
+              <div class="flex">
+                <img style="border-radius: 50px" src="https://avatars.githubusercontent.com/u/126325197?s=400&u=32d12fee5bfae0b19ec0ac6d9b027a0dff28c0f7&v=4" width="50px" height="50px" alt="user" />
+                
+                <p class="text-gradient text-sm md:text-[40px] dark:text-dark  text-[18px] md:whitespace-nowrap font-bold">محتوى السرة الذاتية</p>
+                
+                <button class="btn-close">⨉</button>
+              </div>
+              <p class="text-gradient text-center md:text-[40px] dark:text-dark  text-[18px] md:whitespace-nowrap font-bold">Contenet Language</p>
+              <div class="flex padding: 20px 0 0 0">
+              
+              </div>
+              <div class="btns-download-cv">
+                <a 
+                  target="_blank"
+                      href="https://drive.google.com/file/d/1hyeHNNqTHNDnLiyrwU3TXmi5kAMLd3WE/view?usp=sharing"
+                class="border border-2 hover:bg-transparent  btn bg-transparent text-center"> 
+                <div
+                  class=" text-white   text-sm md:text-lg  "
+                  >عربي
+                  </div>
+                </a>
 
+                    <a href="https://drive.google.com/file/d/1hyeHNNqTHNDnLiyrwU3TXmi5kAMLd3WE/view?usp=sharing" target="_blank" class="border border-2 hover:bg-transparent  btn bg-transparent text-center  ">
+                      <div  class=" text-white   text-sm md:text-lg " >English</div>
+                    </a>
+
+              </div>
+            </section>
+            
+            <div class="overlay hidden"></div>
 
                     <div
             class="relative">
   
-
+      <script src="assets/js/modal.js"></script>        
     </body>
-  
+    
 </html>
 

@@ -1,0 +1,87 @@
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 90%;
+    /* استخدام عرض نسبي */
+    max-width: 450px;
+    /* أقصى عرض */
+    padding: 1.3rem;
+    min-height: 250px;
+    position: absolute;
+    z-index: 2;
+    top: 10%;
+    left: 50%;
+    /* محاذاة إلى المركز */
+    transform: translateX(-50%);
+    /* تحريك إلى اليسار بنسبة 50% */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+
+.modal .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btns-download-cv {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.btn-close {
+    padding: 0.5rem 0.7rem;
+    background: #ee6b6b;
+    border-radius: 20%;
+    transform: translate(10px, -20px);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Media Queries لتعديل التصميم على أحجام الشاشة المختلفة */
+@media (max-width: 600px) {
+    .modal {
+        width: 95%;
+        /* عرض أكبر على الشاشات الصغيرة */
+        padding: 1rem;
+        /* تقليل الحشوة */
+        min-height: 200px;
+        /* تقليل الحد الأدنى للطول */
+    }
+
+    .btn-close {
+        padding: 0.3rem 0.5rem;
+        /* تقليل حجم الأزرار */
+    }
+}
+
+@media (max-width: 400px) {
+    .modal {
+        padding: 0.8rem;
+        /* حشوة أقل على الشاشات الصغيرة جدًا */
+    }
+
+    .btn-close {
+        padding: 0.2rem 0.4rem;
+        /* تقليل حجم الأزرار أكثر */
+    }
+}
