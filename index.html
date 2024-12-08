@@ -99,8 +99,12 @@
            
                 </div>
               </div>
+        
  <div class="h-full w-full  overflow-hidden   ">
-
+ <div style="position: fixed; top: 10px; right: 10px; display: flex; gap: 10px;">
+        <button id="theme-toggle" style="padding: 5px 10px; cursor: pointer;">Switch to Light Mode</button>
+        <button id="lang-toggle" style="padding: 5px 10px; cursor: pointer;">Switch to Arabic</button>
+    </div>
     
         
           <section id="main" class="px-x md:px-md pt-10 md:scroll-mt-20  xl:justify-center">
@@ -284,7 +288,37 @@
 
                     <div
             class="relative">
-  
+     <script>
+        // Theme Toggle Script
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            const html = document.documentElement;
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                html.style.colorScheme = 'light';
+                themeToggle.textContent = 'Switch to Dark Mode';
+            } else {
+                html.classList.add('dark');
+                html.style.colorScheme = 'dark';
+                themeToggle.textContent = 'Switch to Light Mode';
+            }
+        });
+
+        // Language Toggle Script
+        const langToggle = document.getElementById('lang-toggle');
+        langToggle.addEventListener('click', () => {
+            const html = document.documentElement;
+            if (html.lang === 'en') {
+                html.lang = 'ar';
+                langToggle.textContent = 'Switch to English';
+                alert('تم تغيير اللغة إلى العربية');
+            } else {
+                html.lang = 'en';
+                langToggle.textContent = 'Switch to Arabic';
+                alert('Language switched to English');
+            }
+        });
+    </script>
       <script src="assets/js/modal.js"></script>        
     </body>
     
